@@ -11,7 +11,10 @@ export class AccessControlLog {
 
   constructor() { }
 
-  getRegister(): Array<Object>{
+  getRegister(): Array<Object> {
+    this.logMessages.forEach((logMessage) => {
+      console.log(logMessage);
+    })
     return this.logMessages;
   }
 
@@ -19,7 +22,7 @@ export class AccessControlLog {
     let createdAt = new Date;
     let newRegister = {person,message,createdAt}
     this.logMessages.push(newRegister);
-    console.log(this.logMessages);
+    console.log(this.getRegister());
   }
 
 }

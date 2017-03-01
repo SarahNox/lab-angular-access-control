@@ -13,12 +13,10 @@ export class MyLogFormComponent implements OnInit {
   person: string = "";
 
   constructor(public accessControlLog: AccessControlLog) { }
-// public accessControlLog: AccessControlLog
   ngOnInit() {
   }
 
   addPerson(person, message){
-    console.log(person, message);
     this.accessControlLog.addRegister(person, message)
   }
 
